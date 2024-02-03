@@ -10,23 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_02_223516) do
-  create_table "people", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.1].define(version: 2024_02_03_024729) do
   create_table "searches", force: :cascade do |t|
     t.string "indentifier"
     t.string "query"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "search"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "search_count"
   end
 
 end

@@ -9,9 +9,9 @@
 <h1>Your Searchs</h1>
 
 <ul>
-  <% @searchs.each do |user| %>
+  <% @searchs.each do |search| %>
     <li>
-      <%= user.query %>
+      <%= search.query %> (Search Count: <%= search.search_count %>)
     </li>
   <% end %>
 </ul>
