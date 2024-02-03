@@ -26,6 +26,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+#Use bootstrap
+gem 'bootstrap-sass', '~> 3.4.1'
+
+#Use JQuery
+gem 'jquery-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -66,4 +72,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "rspec-rails"
+  gem 'rails-controller-testing'
 end

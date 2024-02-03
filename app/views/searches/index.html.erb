@@ -1,18 +1,18 @@
-<h1>My Search Page</h1>
+  <h1 class="center-container">My Search Page</h1>
 
-<%= form_tag searches_path, method: "POST" do %>
-  <%= label_tag(:search, "What do you want to search") %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-<h1>Your Searchs</h1>
-
-<ul>
-  <% @searchs.each do |search| %>
-    <li>
-      <%= search.query %> (Search Count: <%= search.search_count %>)
-    </li>
+  <%= form_tag searches_path, method: "POST", class: "center-container"  do %>
+    <%= label_tag(:search, "What do you want to search") %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
   <% end %>
-</ul>
+
+  <h1 class="center-container">Your Searchs</h1>
+
+  <ul class="list-unstyled">
+    <% @searchs.each do |search| %>
+      <li>
+        <%= search.query %> => How hyped is: <%= search.search_count %>
+      </li>
+    <% end %>
+  </ul>
 
