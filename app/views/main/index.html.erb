@@ -1,8 +1,0 @@
-<h1>My Search Page</h1>
-
-<%= form_tag "/", method: "GET" do %>
-  <%= label_tag(:search, "What do you want to search") %>
-  <%= text_field_tag :search, params[:search] %>
-
-  <%= submit_tag "Search" %>
-<% end %>
